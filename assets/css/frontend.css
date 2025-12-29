@@ -1,0 +1,177 @@
+/* ===============================
+   GLOBAL RESET (PLUGIN SCOPE)
+================================ */
+.archive-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.archive-wrap * {
+    box-sizing: border-box;
+}
+
+.archive-wrap img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* ===============================
+   FEATURED AREA (POST 1 & 2)
+================================ */
+.archive-wrap .featured-area {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.archive-wrap .featured-left img,
+.archive-wrap .featured-right img {
+    height: 420px;
+    object-fit: cover;
+}
+
+.archive-wrap .featured-left h2 {
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+.archive-wrap .featured-right h3 {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+/* ===============================
+   TRENDING SECTION
+================================ */
+.archive-wrap .trending {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.archive-wrap .trending-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.archive-wrap .trend-card img {
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.archive-wrap .trend-card h5 {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ===============================
+   POSTS 3–6 (LIST)
+================================ */
+.archive-wrap .list-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.archive-wrap .list-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+}
+
+.archive-wrap .list-img img {
+    height: 140px;
+    object-fit: cover;
+}
+
+.archive-wrap .list-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.archive-wrap .list-content p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* ===============================
+   CATEGORY INFO BLOCK
+================================ */
+.archive-wrap .category-info {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.archive-wrap .cat-img img {
+    height: 360px;
+    object-fit: cover;
+}
+
+.archive-wrap .cat-content h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   POSTS 7+ (NEW DESIGN)
+================================ */
+.archive-wrap .new-design {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 70px;
+}
+
+.archive-wrap .new-item img {
+    height: 420px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.archive-wrap .new-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+    .archive-wrap .featured-area {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-wrap .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .archive-wrap .list-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-wrap .category-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .archive-wrap .trending-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-wrap .list-item {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-wrap img {
+        height: auto !important;
+    }
+}
