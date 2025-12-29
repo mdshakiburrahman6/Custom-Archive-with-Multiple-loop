@@ -2,9 +2,9 @@
    GLOBAL RESET (PLUGIN SCOPE)
 ================================ */
 .archive-wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 40px 3%;
     box-sizing: border-box;
 }
 
@@ -23,71 +23,54 @@
 ================================ */
 .archive-wrap .featured-area {
     display: grid !important;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
+    width: calc(100% - 120px);
+    grid-template-columns: 60% 40%;
+    gap: 120px;
     margin-bottom: 60px;
+    /* justify-content: space-around; */
+    align-items: start;
 }
-
-.archive-wrap .featured-left img,
-.archive-wrap .featured-right img {
-    height: 420px;
+.featured-left, .featured-right{
+    width: 100%;
+}
+.featured-left img{
+    width: 100%;
+    height: 520px;
     object-fit: cover;
 }
-
+.featured-right img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.cat-title{
+    color: red;
+    font-size: 3rem;
+    font-weight: 700;
+}
 .archive-wrap .featured-left h2 {
     font-size: 32px;
+    font-weight: 600;
     margin-top: 15px;
+    color: black;
 }
 
 .archive-wrap .featured-right h3 {
+    font-weight: 600;
     font-size: 20px;
     margin-top: 12px;
+    color: black;
 }
 
-/* ===============================
-   TRENDING SECTION
-================================ */
-.archive-wrap .trending {
-    margin: 80px 0;
-    text-align: center;
-}
-
-.archive-wrap .trending-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.archive-wrap .trend-card img {
-    height: 140px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.archive-wrap .trend-card h5 {
-    font-size: 14px;
-    line-height: 1.4;
-}
 
 /* ===============================
    POSTS 3–6 (LIST)
 ================================ */
-.archive-wrap .list-wrap {
+.list-wrap {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-bottom: 80px;
-}
-
-.archive-wrap .list-item {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 20px;
-}
-
-.archive-wrap .list-img img {
-    height: 140px;
-    object-fit: cover;
 }
 
 .archive-wrap .list-content h3 {
@@ -99,6 +82,30 @@
     font-size: 14px;
     color: #444;
 }
+.archive-wrap .list-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+.list-img{
+    width: 40%;
+    height: 100%;
+}
+.list-img img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.list-content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+    padding-right: 30px;
+}
 
 /* ===============================
    CATEGORY INFO BLOCK
@@ -106,32 +113,46 @@
 .archive-wrap .category-info {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 100px;
     align-items: center;
     margin: 100px 0;
 }
 
 .archive-wrap .cat-img img {
-    height: 360px;
+    width: 100%;
+    height: 450px;
     object-fit: cover;
+    object-position: top center;
 }
 
 .archive-wrap .cat-content h2 {
-    font-size: 34px;
+    /* font-size: 34px; */
     margin-bottom: 20px;
 }
 
 /* ===============================
    POSTS 7+ (NEW DESIGN)
 ================================ */
-.archive-wrap .new-design {
-    display: grid !important;
-    grid-template-columns: 1fr;
-    gap: 70px;
+.post-after-6{
+    display: flex;
+    justify-content: space-around;
 }
 
+.archive-wrap .new-design {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 70px;
+}
+.new-item{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+}
 .archive-wrap .new-item img {
-    height: 420px;
+    /* height: 420px; */
+    width: 30%;
+    height: 300px;
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -141,10 +162,150 @@
     margin-bottom: 10px;
 }
 
+
+/* ===================================== */
+/* ===================================== */
+
+/* Top Bar */
+ul.category-bar-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ul.category-bar-list li{
+    list-style: none;
+    text-align: center;
+}
+ul.category-bar-list li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: red;
+    font-size: 16px;
+    font-weight: 600;
+}
+ul.category-bar-list li a:hover{
+    color: rgb(189, 19, 19);
+}
+/* ===================================== */
+/* ===================================== */
+
+/* ===============================
+   TRENDING – STORIE DI TENDENZA
+================================ */
+
+.trending {
+    text-align: left;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.trending-title {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.trending-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #111;
+    margin-bottom: 60px;
+}
+
+/* Row */
+.trending-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+/* Card */
+.trend-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Image */
+.trend-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Content */
+.trend-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.trend-content h4 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.trend-content h4 a:hover {
+    text-decoration: underline;
+}
+
+/* Read more */
+.trend-read {
+    font-size: 13px;
+    color: red;
+    text-decoration: none;
+}
+
+.trend-read:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+    .trending-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .trend-item {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .trend-img img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
 /* ===============================
    RESPONSIVE
 ================================ */
 @media (max-width: 992px) {
+    .archive-wrap {
+        padding: 30px 3%;
+    }
+    .archive-wrap .featured-area {
+        display: grid !important;
+        width: 100%;
+        grid-template-columns: 60% 40%;
+        gap: 20px;
+        margin-bottom: 60px;
+        /* justify-content: space-around; */
+        align-items: start;
+    }
+
+
     .archive-wrap .featured-area {
         grid-template-columns: 1fr;
     }

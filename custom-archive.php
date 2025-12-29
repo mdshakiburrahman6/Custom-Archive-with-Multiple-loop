@@ -5,7 +5,7 @@
  * Description: Custom post type with Custom Archive Page design.
  * Author: Md Shakibur Rahman
  * Author URI: https://github.com/mdshakiburrahman6
- * Version: 1.0.0 
+ * Version: 1.1.1 
  * Text Domain: custom-post
  */
 
